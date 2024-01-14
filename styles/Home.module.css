@@ -167,7 +167,9 @@
   bottom: 20px;
   left: 0;
   right: 0;
-  background: #070707;
+  background: rgba(7, 7, 7, 0.99); /* 99% transparency */
+}
+
 }
 .navIcon {
   display: flex;
