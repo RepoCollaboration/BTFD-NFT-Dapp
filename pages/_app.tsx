@@ -1,8 +1,13 @@
 import type { AppProps } from "next/app";
 import {
   ThirdwebProvider,
-  embeddedWallet,
-  smartWallet,
+  ConnectWallet,
+  metamaskWallet,
+  coinbaseWallet,
+  walletConnect,
+  safeWallet,
+  trustWallet,
+  phantomWallet,
 } from "@thirdweb-dev/react";
 import "../styles/globals.css";
 import Navbar from "../components/navbar";
@@ -18,11 +23,10 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ThirdwebProvider
       clientId="038b83b824298094fd986ab87fd36ca3"
       activeChain={activeChain}
-      supportedWallets={[
-        smartWallet(embeddedWallet(), {
-          factoryAddress: "0x9838b534cd5950CB6ea9E7fa94c00CF3986F953B",
-          gasless: true,
-        }),
+       supportedWallets={[
+        metamaskWallet(),
+        coinbaseWallet(),
+        walletConnect(),
       ]}
     >
       <Header />
