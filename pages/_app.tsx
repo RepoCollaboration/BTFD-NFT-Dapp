@@ -16,7 +16,7 @@ const activeChain = "polygon";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThirdwebProvider
-      clientId={process.env.NEXT_PUBLIC_TEMPLATE_CLIENT_ID}
+      clientId="038b83b824298094fd986ab87fd36ca3"
       activeChain={activeChain}
       supportedWallets={[
         smartWallet(embeddedWallet(), {
